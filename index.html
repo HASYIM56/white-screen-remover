@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>White Screen Remover - HASYIM56</title>
+    <link rel="icon" href="img/H56.png" type="image/png">
+    <link rel="stylesheet" href="https://unpkg.com/pico.css">
+    <link rel="stylesheet" href="static/styles.css">
+    <link rel="stylesheet" href="static/effect.css">
+    <link rel="stylesheet" href="static/author-text.css">
+    <link rel="stylesheet" href="static/pico.classless.conditional.grey.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <main class="container fade-in">
+        <h1 class="fade-in">White Screen Remover</h1>
+        <form id="removeBgForm" class="fade-in" enctype="multipart/form-data">
+            <input type="file" name="File" required accept="image/*">
+            <input type="submit" value="Remove White Screen">
+        </form>
+        <div id="loadingContainer" style="display: none; width: 100%; margin-top: 15px;">
+            <div id="loadingBar" style="width: 0; height: 20px; background-color: #4CAF50; border-radius: 8px;"></div>
+            <p id="loadingText" style="color: white; margin-top: 5px; font-family: 'kustom'; text-align: center;">0%</p>
+        </div>
+        <div id="statusMessage" class="fade-in"></div>
+        <div id="resultContainer" style="display: none; margin-top: 20px;">
+            <h2>Result:</h2>
+            <div id="resultImageWrapper">
+                <img id="resultImage" alt="Result Image" style="max-width: 100%; border-radius: 12px;">
+            </div>
+            <button id="downloadButton" style="margin-top: 10px;">
+                <i class="fas fa-download"></i> Download Result
+            </button>
+        </div>
+    </main>
+    <div class="author-text fade-in">
+        <div class="creator-box">
+            <p>CREATOR :</p>
+            <span class="highlight">HASYIM56</span>
+        </div>
+    </div>
+    <footer>
+        <button id="bugReportButton" onclick="window.location.href='bug-report/bugreport.html'">
+            <i class="fas fa-bug"></i> Lapor Bug
+        </button>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="static/script.js"></script>
+    <script src="static/youtube.js"></script>
+</body>
+</html>
