@@ -1,0 +1,251 @@
+@font-face {
+    font-family: 'kustom';
+    src: url('Espressonal.otf') format('truetype');
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100vh;
+    background-color: #000000;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    font-family: 'kustom', sans-serif;
+    overflow-y: auto;
+}
+
+.container, .author-text {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    width: 100%;
+    max-width: 500px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+    margin-top: 20px;
+    z-index: 2;
+}
+
+h1 {
+    color: #FFFFFF;
+    font-size: 2em;
+    font-family: 'kustom', sans-serif;
+}
+
+input[type="file"] {
+    padding: 10px;
+    border-radius: 8px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    background: rgba(0, 0, 0, 0.2);
+    color: #FFFFFF;
+    font-family: 'kustom', sans-serif;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+input[type="file"]:focus {
+    transform: scale(1.05);
+    outline: none;
+    border-color: #ffffff;
+}
+
+input[type="submit"] {
+    padding: 10px 15px;
+    font-size: 1em;
+    border-radius: 8px;
+    border: none;
+    background-color: #ffffff;
+    color: #000000;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+    margin-top: 15px;
+    font-family: 'kustom', sans-serif;
+}
+
+input[type="submit"]:hover {
+    background-color: #ffffff;
+    transform: scale(1.05);
+}
+
+#statusMessage {
+    margin-top: 10px;
+    color: green;
+    font-family: 'kustom', sans-serif;
+}
+
+.author-text {
+    position: fixed;
+    bottom: 100px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 1em;
+    color: #FFFFFF;
+    font-family: 'kustom', sans-serif;
+    background-color: #000000;
+    padding: 10px;
+    width: 100%;
+}
+
+.author-text .highlight {
+    font-size: 1.2em;
+    color: #FFD700;
+}
+
+.creator-box {
+    background-color: #000000;
+    padding: 10px;
+    display: inline-block;
+    font-size: 1.1em;
+    color: white;
+    font-family: 'kustom', sans-serif;
+}
+
+footer {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    bottom: 0;
+    z-index: 0;
+}
+
+#bugReportButton {
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 8px;
+    background-color: #27c0fd;
+    color: #000000;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+    font-family: 'kustom', sans-serif;
+}
+
+#bugReportButton i {
+    margin-right: 5px;
+}
+
+#bugReportButton:hover {
+    background-color: #27c0fd;
+    transform: scale(1.05);
+}
+
+#loadingContainer {
+    display: none;
+    text-align: center;
+}
+
+#loadingBar {
+    width: 0%;
+    height: 20px;
+    background-color: #4CAF50;
+    border-radius: 8px;
+}
+
+#loadingText {
+    color: white;
+    font-family: 'kustom';
+    text-align: center;
+    margin-top: 5px;
+}
+
+#downloadContainer {
+    display: none;
+    text-align: center;
+}
+
+#downloadButton {
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 8px;
+    border: none;
+    background-color: #3d81f7;
+    color: #FFFFFF;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+#downloadButton i {
+    margin-right: 5px;
+}
+
+#downloadButton:hover {
+    background-color: #3d81f7;
+    transform: scale(1.05);
+}
+
+#resultContainer {
+    display: none;
+    margin-top: 20px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+#resultImageWrapper {
+    width: 100%;
+    max-height: 80vh;
+    overflow: auto;
+    display: flex;
+    justify-content: center;
+}
+
+#resultImage {
+    max-width: 100%;
+    max-height: 80vh;
+    border-radius: 12px;
+    overflow: hidden;
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+
+#downloadButtonWrapper {
+    margin-top: 10px;
+}
+
+#loadingContainer {
+    display: none;
+    text-align: center;
+}
+
+#loadingBar {
+    width: 0%;
+    height: 20px;
+    background-color: #4CAF50;
+    border-radius: 8px;
+}
+
+#loadingText {
+    color: white;
+    font-family: 'kustom';
+    text-align: center;
+    margin-top: 5px;
+}
+
+/* New Changes */
+body {
+    overflow-y: auto; /* Enable scrolling */
+}
+
+#resultContainer {
+    position: relative;
+    z-index: 1;
+    padding-bottom: 70px; /* Avoid overlap with footer */
+}
+
+footer {
+    z-index: 0;
+}
